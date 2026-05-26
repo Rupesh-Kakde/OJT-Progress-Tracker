@@ -26,9 +26,10 @@ Build a simple productivity application to manage:
 Add screenshots in:
 assets/Screenshots/
 
-Files:
-- [!vscode](assets/Screenshots/Day1-vscode.png)
-- [!vscode](assets\Screenshots\Day2-Github.png) 
+### Image:
+![Day 1 VS Code](assets/Screenshots/Day1-vscode.png)
+
+![Day 2 GitHub](assets/Screenshots/Day2-Github.png)
 
 ### Status
 Completed
