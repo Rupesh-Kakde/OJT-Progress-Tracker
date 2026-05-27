@@ -57,3 +57,17 @@ Plan the OJT Progress Tracker before coding.
 
 ### Status
 Completed
+
+
+## Day 3 — UI Build
+
+### Completed
+
+- HTML Layout
+- CSS Styling
+- Responsive Structure
+- Static Page Created
+
+### Evidence
+
+![Day 3 UI](assets/Screenshots/Day3-UI.png)
