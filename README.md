@@ -71,3 +71,18 @@ Completed
 ### Evidence
 
 ![Day 3 UI](assets/Screenshots/Day3-UI.png)
+
+
+## Day 4 — JavaScript Logic
+
+### Completed
+
+- Add Task
+- Delete Task
+- Mark Complete
+- Dynamic Summary
+- Local Storage
+
+### Evidence
+
+![Day 4](assets/Screenshots/Day4-WorkingUI.png)

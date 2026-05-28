@@ -40,6 +40,7 @@ Add Task
 </h2>
 
 <input
+id="taskInput"
 type="text"
 placeholder="Enter Task Title">
 
@@ -62,7 +63,7 @@ Database
 <input
 type="date">
 
-<button>
+<button id="addTaskBtn">
 
 Add Task
 
@@ -100,11 +101,15 @@ Add Task
 
 <section class="tasks">
 
-<h2>Task List</h2>
+<h2>
+Task List
+</h2>
 
-<div class="empty">
+<div id="taskList">
 
+<p class="empty">
 No Tasks Added
+</p>
 
 </div>
 
@@ -112,11 +117,12 @@ No Tasks Added
 
 <section class="notes">
 
-<h2>Notes</h2>
+<h2>
+Notes
+</h2>
 
 <textarea
-placeholder=
-"Write today's learning">
+placeholder="Write today's learning">
 </textarea>
 
 </section>
