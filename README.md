@@ -86,3 +86,18 @@ Completed
 ### Evidence
 
 ![Day 4](assets/Screenshots/Day4-WorkingUI.png)
+
+
+## Day 5 — Feature Enhancements
+
+### Completed
+
+- Added Edit Task functionality
+- Added Category Filter feature
+- Improved task management experience
+- Verified Local Storage compatibility with new features
+- Tested all existing functionality after enhancements
+
+### Evidence
+
+![Day 5](assets/Screenshots/Day5-FeatureEnhancements.png)

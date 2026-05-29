@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -44,24 +45,25 @@ id="taskInput"
 type="text"
 placeholder="Enter Task Title">
 
-<select>
+<select id="categorySelect">
 
-<option>
+<option value="Frontend">
 Frontend
 </option>
 
-<option>
+<option value="Backend">
 Backend
 </option>
 
-<option>
+<option value="Database">
 Database
 </option>
 
 </select>
 
 <input
-type="date">
+type="date"
+id="dateInput">
 
 <button id="addTaskBtn">
 
@@ -101,14 +103,38 @@ Add Task
 
 <section class="tasks">
 
+<div class="task-header">
+
 <h2>
 Task List
 </h2>
 
+<select id="filterSelect">
+
+<option value="All">
+All
+</option>
+
+<option value="Frontend">
+Frontend
+</option>
+
+<option value="Backend">
+Backend
+</option>
+
+<option value="Database">
+Database
+</option>
+
+</select>
+
+</div>
+
 <div id="taskList">
 
 <p class="empty">
-No Tasks Added
+No Tasks Found
 </p>
 
 </div>
