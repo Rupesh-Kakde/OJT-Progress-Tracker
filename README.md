@@ -101,3 +101,17 @@ Completed
 ### Evidence
 
 ![Day 5](assets/Screenshots/Day5-FeatureEnhancements.png)
+
+
+## Day 6 — Progress Tracking and Data Export Enhancements
+
+### Completed
+
+- Added Progress Chart feature to visually display task progress.
+- Added Export CSV functionality to download task data as a CSV report.
+
+### Evidence
+
+![Day 6 Progress Chart](assets/Screenshots/Day6-ProgressChart.png)
+
+![Day 6 Export CSV](assets/Screenshots/Day6-ExportCSV.png)

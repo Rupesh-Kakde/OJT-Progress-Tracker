@@ -1,163 +1,204 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>OJT Progress Tracker</title>
+    <title>OJT Progress Tracker</title>
 
-<link
-rel="stylesheet"
-href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<header>
+        <header>
 
-<h1>
-OJT Progress Tracker
-</h1>
+            <h1>OJT Progress Tracker</h1>
 
-<p>
-Track daily OJT work and learning
-</p>
+            <p>Track daily OJT work and learning</p>
 
-</header>
+        </header>
+
 
 <section class="task-form">
 
-<h2>
-Add Task
-</h2>
+    <h2>Add Task</h2>
 
-<input
-id="taskInput"
-type="text"
-placeholder="Enter Task Title">
+    <input
+        id="taskInput"
+        type="text"
+        placeholder="Enter Task Title">
 
-<select id="categorySelect">
+    <select id="categorySelect">
 
-<option value="Frontend">
-Frontend
-</option>
+        <option value="Frontend">
+            Frontend
+        </option>
 
-<option value="Backend">
-Backend
-</option>
+        <option value="Backend">
+            Backend
+        </option>
 
-<option value="Database">
-Database
-</option>
+        <option value="Database">
+            Database
+        </option>
 
-</select>
+    </select>
 
-<input
-type="date"
-id="dateInput">
+    <input
+        type="date"
+        id="dateInput">
 
-<button id="addTaskBtn">
+    <button id="addTaskBtn">
+        Add Task
+    </button>
 
-Add Task
-
-</button>
-
-</section>
-
-<section class="summary">
-
-<div class="card">
-
-<h3>Total</h3>
-
-<p>0</p>
-
-</div>
-
-<div class="card">
-
-<h3>Completed</h3>
-
-<p>0</p>
-
-</div>
-
-<div class="card">
-
-<h3>Pending</h3>
-
-<p>0</p>
-
-</div>
+    <button id="exportBtn">
+        Export CSV
+    </button>
 
 </section>
 
-<section class="tasks">
 
-<div class="task-header">
 
-<h2>
-Task List
-</h2>
+        <section class="summary">
 
-<select id="filterSelect">
+            <div class="card">
 
-<option value="All">
-All
-</option>
+                <h3>Total</h3>
 
-<option value="Frontend">
-Frontend
-</option>
+                <p>0</p>
 
-<option value="Backend">
-Backend
-</option>
+            </div>
 
-<option value="Database">
-Database
-</option>
+            <div class="card">
 
-</select>
+                <h3>Completed</h3>
 
-</div>
+                <p>0</p>
 
-<div id="taskList">
+            </div>
 
-<p class="empty">
-No Tasks Found
-</p>
+            <div class="card">
 
-</div>
+                <h3>Pending</h3>
 
-</section>
+                <p>0</p>
 
-<section class="notes">
+            </div>
 
-<h2>
-Notes
-</h2>
+        </section>
 
-<textarea
-placeholder="Write today's learning">
-</textarea>
+        <!-- Progress Chart Section -->
 
-</section>
+        <section class="progress-chart">
 
-</div>
+            <h2>Progress Chart</h2>
 
-<script src="js/script.js">
-</script>
+            <div class="progress-item">
+
+                <div class="progress-label">
+
+                    <span>Completed Tasks</span>
+
+                    <span id="completedPercent">0%</span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="completedBar"
+                        class="progress-fill completed-fill">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="progress-item">
+
+                <div class="progress-label">
+
+                    <span>Pending Tasks</span>
+
+                    <span id="pendingPercent">0%</span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="pendingBar"
+                        class="progress-fill pending-fill">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="tasks">
+
+            <div class="task-header">
+
+                <h2>Task List</h2>
+
+                <select id="filterSelect">
+
+                    <option value="All">
+                        All
+                    </option>
+
+                    <option value="Frontend">
+                        Frontend
+                    </option>
+
+                    <option value="Backend">
+                        Backend
+                    </option>
+
+                    <option value="Database">
+                        Database
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div id="taskList">
+
+                <p class="empty">
+                    No Tasks Found
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="notes">
+
+            <h2>Notes</h2>
+
+            <textarea
+                placeholder="Write today's learning">
+            </textarea>
+
+        </section>
+
+    </div>
+
+    <script src="js/script.js"></script>
 
 </body>
 
 </html>
+

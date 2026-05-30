@@ -8,6 +8,9 @@ document.getElementById("categorySelect");
 const addTaskBtn =
 document.getElementById("addTaskBtn");
 
+const exportBtn =
+document.getElementById("exportBtn");
+
 const taskList =
 document.getElementById("taskList");
 
@@ -17,7 +20,9 @@ document.getElementById("filterSelect");
 let tasks =
 JSON.parse(localStorage.getItem("tasks")) || [];
 
+
 renderTasks();
+
 
 addTaskBtn.addEventListener("click", () => {
 
@@ -57,11 +62,16 @@ taskInput.value = "";
 
 });
 
+
+exportBtn.addEventListener("click", exportCSV);
+
+
 filterSelect.addEventListener("change", () => {
 
 renderTasks();
 
 });
+
 
 function renderTasks(){
 
@@ -150,6 +160,7 @@ updateSummary();
 
 }
 
+
 function editTask(id){
 
 const task =
@@ -180,6 +191,7 @@ renderTasks();
 
 }
 
+
 function deleteTask(id){
 
 tasks =
@@ -191,6 +203,7 @@ saveTasks();
 renderTasks();
 
 }
+
 
 function toggleTask(id){
 
@@ -214,6 +227,7 @@ renderTasks();
 
 }
 
+
 function saveTasks(){
 
 localStorage.setItem(
@@ -222,6 +236,7 @@ JSON.stringify(tasks)
 );
 
 }
+
 
 function updateSummary(){
 
@@ -238,8 +253,122 @@ total - completed;
 const cards =
 document.querySelectorAll(".card p");
 
-cards[0].innerText = total;
-cards[1].innerText = completed;
-cards[2].innerText = pending;
+cards[0].innerText =
+total;
+
+cards[1].innerText =
+completed;
+
+cards[2].innerText =
+pending;
+
+updateProgressChart(
+total,
+completed,
+pending
+);
 
 }
+
+
+function updateProgressChart(
+total,
+completed,
+pending
+){
+
+let completedPercent = 0;
+
+let pendingPercent = 0;
+
+if(total > 0){
+
+completedPercent =
+Math.round(
+(completed / total) * 100
+);
+
+pendingPercent =
+Math.round(
+(pending / total) * 100
+);
+
+}
+
+document.getElementById(
+"completedBar"
+).style.width =
+completedPercent + "%";
+
+document.getElementById(
+"pendingBar"
+).style.width =
+pendingPercent + "%";
+
+document.getElementById(
+"completedPercent"
+).innerText =
+completedPercent + "%";
+
+document.getElementById(
+"pendingPercent"
+).innerText =
+pendingPercent + "%";
+
+}
+
+
+function exportCSV(){
+
+if(tasks.length === 0){
+
+alert(
+"No tasks available to export"
+);
+
+return;
+
+}
+
+let csvContent =
+"Task Title,Category,Status\n";
+
+tasks.forEach(task => {
+
+const status =
+task.completed
+? "Completed"
+: "Pending";
+
+csvContent +=
+`${task.title},${task.category},${status}\n`;
+
+});
+
+const blob =
+new Blob(
+[csvContent],
+{ type: "text/csv" }
+);
+
+const url =
+window.URL.createObjectURL(blob);
+
+const a =
+document.createElement("a");
+
+a.href = url;
+
+a.download =
+"ojt-progress-report.csv";
+
+document.body.appendChild(a);
+
+a.click();
+
+document.body.removeChild(a);
+
+window.URL.revokeObjectURL(url);
+
+}
+

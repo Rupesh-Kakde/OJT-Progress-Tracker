@@ -1,4 +1,5 @@
 
+
 *{
 margin:0;
 padding:0;
@@ -67,7 +68,8 @@ font-size:16px;
 .task-form,
 .summary,
 .tasks,
-.notes{
+.notes,
+.progress-chart{
 
 background:white;
 
@@ -84,7 +86,8 @@ box-shadow:
 
 .task-form h2,
 .tasks h2,
-.notes h2{
+.notes h2,
+.progress-chart h2{
 
 margin-bottom:15px;
 
@@ -227,6 +230,74 @@ font-weight:bold;
 
 }
 
+/* Progress Chart */
+
+.progress-item{
+
+margin-bottom:20px;
+
+}
+
+.progress-label{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:8px;
+
+font-weight:bold;
+
+color:#334155;
+
+}
+
+.progress-bar{
+
+width:100%;
+
+height:22px;
+
+background:#e2e8f0;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.progress-fill{
+
+height:100%;
+
+width:0%;
+
+transition:width 0.4s ease;
+
+}
+
+.completed-fill{
+
+background:linear-gradient(
+135deg,
+#10b981,
+#059669
+);
+
+}
+
+.pending-fill{
+
+background:linear-gradient(
+135deg,
+#f59e0b,
+#d97706
+);
+
+}
+
 .task-header{
 
 display:flex;
@@ -290,7 +361,11 @@ margin-bottom:6px;
 }
 
 .completed{
-    color:#64748b;
+
+color:#64748b;
+
+text-decoration:none;
+
 }
 
 .task-category{
@@ -397,4 +472,11 @@ flex:1;
 
 }
 
+.progress-label{
+
+font-size:14px;
+
 }
+
+}
+
